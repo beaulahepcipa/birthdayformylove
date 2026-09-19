@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(-45deg,#ff4e8a,#ff7eb3,#8e44ad,#5b2c6f);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+    color:white;
+    overflow-x:hidden;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.loader{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    font-weight:bold;
+    background:#111;
+    position:fixed;
+    z-index:999;
+    animation:hideLoader 3s forwards;
+}
+
+@keyframes hideLoader{
+    90%{opacity:1;}
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:70px;
+    font-family:'Great Vibes',cursive;
+}
+
+.hero h2{
+    margin-top:15px;
+    font-size:42px;
+}
+
+.quote{
+    margin-top:20px;
+    max-width:700px;
+    line-height:1.8;
+    font-size:18px;
+}
+
+button{
+    margin-top:40px;
+    padding:18px 45px;
+    border:none;
+    border-radius:50px;
+    font-size:20px;
+    background:white;
+    color:#ff4081;
+    cursor:pointer;
+    transition:.4s;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 10px 30px rgba(255,255,255,.5);
+}
+
+#surprise{
+    display:none;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.card{
+    width:90%;
+    max-width:750px;
+    margin:auto;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
+}
+
+.card h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.gift{
+    font-size:100px;
+    margin-top:40px;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.gift:hover{
+    transform:rotate(15deg) scale(1.2);
+}
+
+.message{
+    margin-top:30px;
+}
+
+#giftMessage{
+    margin-top:20px;
+    font-size:24px;
+    color:#fff6c1;
+}
+
+.gallery{
+    padding:90px 20px;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.photos img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.5s;
+}
+
+.photos img:hover{
+    transform:scale(1.05);
+}
+
+.countdown{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.countdown h2{
+    font-size:38px;
+}
+
+#timer{
+    margin-top:30px;
+    font-size:35px;
+    font-weight:bold;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    font-size:18px;
+}
+
+.hearts::before,
+.hearts::after{
+    content:"💖 💕 💗 💘 ❤️";
+    position:fixed;
+    width:100%;
+    left:0;
+    animation:float 10s linear infinite;
+    opacity:.25;
+    font-size:35px;
+}
+
+.hearts::after{
+    animation-delay:5s;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:52px;
+}
+
+.hero h2{
+    font-size:30px;
+}
+
+.quote{
+    font-size:16px;
+}
+
+.card h2{
+    font-size:28px;
+}
+
+#timer{
+    font-size:24px;
+}
+
+button{
+    font-size:18px;
+    padding:15px 35px;
+}
+
+}
+.love-letter{
+padding:100px 20px;
+text-align:center;
+}
+
+.love-letter h2{
+font-size:42px;
+margin-bottom:40px;
+}
+
+.letter-box{
+max-width:900px;
+margin:auto;
+padding:40px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+border-radius:25px;
+line-height:2;
+font-size:20px;
+white-space: pre-line;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.musicBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff4081;
+color:white;
+border:none;
+padding:15px 22px;
+border-radius:50px;
+cursor:pointer;
+font-size:18px;
+z-index:999;
+}
